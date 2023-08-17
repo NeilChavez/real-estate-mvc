@@ -6,6 +6,12 @@ class Router
 {
 
   public $routesGET = [];
+  public $routesPOST = [];
+
+  public function post($currentUrl, $fn)
+  {
+    $this->routesPOST[$currentUrl] = $fn;
+  }
 
   public function get($currentUrl, $fn)
   {
@@ -25,6 +31,9 @@ class Router
       $fn =  $this->routesGET[$currentUrl] ?? null;
     }
 
+    if($method === POST){
+      $fn = $this->routesPOST[$currentUrl] ?? null;
+    }
     if ($fn) {
       call_user_func($fn, $this);
     } else {
