@@ -13,5 +13,7 @@
       "Controllers\\": "./controllers"
     }
   },
-  "require": {}
+  "require": {
+    "intervention/image": "^2.7"
+  }
 }
