@@ -1,4 +1,20 @@
+<?php
+
+$codeMessage = $_GET["code_message"] ?? null;
+$message = "";
+?>
 <h1>Admin</h1>
+
+
+<?php
+if ($codeMessage) {
+
+  $message = mapMessageCodeToResult($codeMessage);
+}
+?>
+
+<p><?php echo $message ?></p>
+
 
 <br>
 <br>
@@ -16,7 +32,6 @@
     <td>Actions</td>
   </thead>
   <tbody>
-
     <?php
     foreach ($properties as $property) {
     ?>
@@ -26,8 +41,17 @@
         <td><?php echo $property->address_name . " " . $property->address_number  ?></td>
         <td><?php echo $property->image ?></td>
         <td>
-          <button>Edit</button>
-          <button>Delete</button>
+          <?php
+          $id = $property->id;
+          echo "ID: " . $id;
+          ?>
+          <form method="POST" action="/delete">
+            <input type="hidden" value="<?php echo $property->id ?>" name="id">
+            <button>Delete</button>
+          </form>
+          <a href="/update?id=<?php echo $property->id; ?>">
+            Edit
+          </a>
         </td>
       </tr>
     <?php
