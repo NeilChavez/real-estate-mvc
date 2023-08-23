@@ -96,17 +96,51 @@ class Property extends ActiveRecord
 
     $result = self::$db->query($query);
 
+
     if ($result) {
-      echo "SUCCESSFULLY INSERTED IN DB";
-      header('Location: /admin');
+      header('Location: /admin?code_message=1');
     } else {
       echo "NOT INSERTED IN DB";
     }
   }
 
-  public function update(){
-    echo "envia el update" . var_dump($this);
-    exit;
+  public function update()
+  {
+
+    $error = mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+    $attributes = $this->getAttributes();
+
+    $data = [];
+
+    foreach ($attributes as $key => $value) {
+      $data[] = "$key='$value'";
+    }
+
+    $dataAttributes = join(", ", $data);
+
+    $query = "UPDATE " . self::$table . " SET " . $dataAttributes . " WHERE id=" . $this->id;
+
+    $result = self::$db->query($query);
+
+    if ($result) {
+      header('Location: /admin?code_message=2');
+    } else {
+      echo "NOT UPDATED IN DB";
+    }
+  }
+
+  public function delete()
+  {
+    $query = "DELETE from " . self::$table . " WHERE id=$this->id";
+
+    $result = self::$db->query($query);
+
+    if ($result) {
+      header('Location: /admin?code_message=3');
+    } else {
+      echo "NOT DELETED IN DB :( ";
+    }
   }
 
   public function getAttributes()
@@ -125,14 +159,28 @@ class Property extends ActiveRecord
   public static function consultSQL($query)
   {
     $result = self::$db->query($query);
-
     $properties = [];
+
     while ($row = $result->fetch_assoc()) {
 
       $properties[] = self::createObject($row);
     }
+    // Free up the memory occupied by the query result
+    $result->free();
 
     return $properties;
+  }
+
+  public function sincronize($args)
+  {
+
+    foreach ($args as $key => $value) {
+
+      if (property_exists($this, $key) && $value !== null) {
+
+        $this->$key = $value;
+      }
+    }
   }
 
   public static function createObject($row)
