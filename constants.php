@@ -21,6 +21,11 @@ define("USERNAME", "root");
 define("PASSWORD", "");
 define("DB_NAME", "real_state");
 
+//MESSAGES OPERATIONS 
+define("CREATE_SUCCESS", "Data create with success");
+define("UPDATED_SUCCESS", "Data updated with success");
+define("DELETED_SUCCESS", "Data deleted with success");
+
 //CONTENT TEXT
 define("PAGE_TITLE", "Real State");
 
