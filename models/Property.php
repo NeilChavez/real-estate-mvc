@@ -98,7 +98,9 @@ class Property extends ActiveRecord
 
 
     if ($result) {
-      header('Location: /admin?code_message=1');
+      $code = CODE_CREATED_SUCCESS;
+      $direction = ROUTE_ADMIN . "?code_message=" . $code;
+      header("Location: " . $direction);
     } else {
       echo "NOT INSERTED IN DB";
     }
@@ -106,8 +108,6 @@ class Property extends ActiveRecord
 
   public function update()
   {
-
-    $error = mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
     $attributes = $this->getAttributes();
 
@@ -124,7 +124,9 @@ class Property extends ActiveRecord
     $result = self::$db->query($query);
 
     if ($result) {
-      header('Location: /admin?code_message=2');
+      $code = CODE_UPDATED_SUCCESS;
+      $direction = ROUTE_ADMIN . "?code_message=" . $code;
+      header("Location: " . $direction);
     } else {
       echo "NOT UPDATED IN DB";
     }
@@ -137,7 +139,14 @@ class Property extends ActiveRecord
     $result = self::$db->query($query);
 
     if ($result) {
-      header('Location: /admin?code_message=3');
+
+      //delete image in server
+      $this->deleteImg();
+
+      //redirect the user
+      $code = CODE_DELETED_SUCCESS;
+      $direction = ROUTE_ADMIN . "?code_message=" . $code;
+      header("Location: " . $direction);
     } else {
       echo "NOT DELETED IN DB :( ";
     }
@@ -193,5 +202,13 @@ class Property extends ActiveRecord
     }
 
     return $property;
+  }
+
+  public function deleteImg()
+  {
+    if (is_dir(PATH_IMAGES)) {
+      $fileImage = PATH_IMAGES . $this->image;
+      file_exists($fileImage) && unlink($fileImage);
+    }
   }
 }
