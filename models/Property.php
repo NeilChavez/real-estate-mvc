@@ -85,26 +85,6 @@ class Property extends ActiveRecord
     return array_shift($property);
   }
 
-  public function create()
-  {
-
-    $attributes = $this->getAttributes();
-    $tables = join(", ", array_keys($attributes));
-    $values = join("','", array_values($attributes));
-
-    $query = "INSERT INTO " . self::$table . " (" . $tables . ") VALUES ('" . $values . "')";
-
-    $result = self::$db->query($query);
-
-
-    if ($result) {
-      $code = CODE_CREATED_SUCCESS;
-      $direction = ROUTE_ADMIN . "?code_message=" . $code;
-      header("Location: " . $direction);
-    } else {
-      echo "NOT INSERTED IN DB";
-    }
-  }
 
   public function update()
   {
@@ -152,18 +132,6 @@ class Property extends ActiveRecord
     }
   }
 
-  public function getAttributes()
-  {
-
-    $attributes = [];
-
-    foreach (self::$columnsDB as $columnName) {
-      if ($columnName === "id") continue;
-      $attributes[$columnName] = $this->$columnName;
-    }
-
-    return $attributes;
-  }
 
   public static function consultSQL($query)
   {
@@ -210,5 +178,16 @@ class Property extends ActiveRecord
       $fileImage = PATH_IMAGES . $this->image;
       file_exists($fileImage) && unlink($fileImage);
     }
+  }
+
+  public function setImage($newImage)
+  {
+    // if the object instance of this class has an id, it means we are updating so we need to delete the old image from the server
+    if (!is_null($this->id)) {
+      // we can delete the image 
+      $this->deleteImg();
+    }
+
+    $this->image = $newImage;
   }
 }

@@ -27,28 +27,7 @@ class Agent extends ActiveRecord
     $this->image_agent = $args["image_agent"] ?? "";
   }
 
-  public function create()
-  {
-    $attributes = $this->getAttributes();
 
-    $columns = join(", ", array_keys($attributes));
-    $values = join("', '", array_values($attributes));
-
-
-    $query = "INSERT INTO agents (" .
-      $columns . ") VALUES ('" .
-      $values . "');";
-
-    $result = self::$db->query($query);
-
-    if ($result) {
-      $code = CODE_CREATED_SUCCESS;
-      $direction = ROUTE_ADMIN . "?code_message=" . $code;
-      header("Location: " . $direction);
-    } else {
-      echo "NOT INSERTED IN DB";
-    }
-  }
   public function update()
   {
 
@@ -87,29 +66,6 @@ class Agent extends ActiveRecord
       echo "NOT DELETED IN DB";
     }
 
-  }
-
-  public function getAttributes()
-  {
-    $attributes = [];
-
-    foreach ($this as $key => $value) {
-
-      if ($key === "id") continue;
-
-
-      $attributes[$key] = $this->sanitizeAttribute($value);
-    }
-
-    return $attributes;
-  }
-
-  public function sanitizeAttribute($attribute)
-  {
-
-    $escapedValue = self::$db->escape_string($attribute);
-
-    return $escapedValue;
   }
 
   public function validate()
