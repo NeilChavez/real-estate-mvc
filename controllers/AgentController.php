@@ -97,4 +97,20 @@ class AgentController {
       "errors" => $errors
     ]);
   }
+  public static function delete(){
+    if ($_SERVER[REQUEST_METHOD] === POST) {
+        
+        //take the id of the element to delete and validate it
+        $id = filter_var($_POST["id"], FILTER_VALIDATE_INT);
+
+        //if the id sended is not valid, redirect to "/"
+        if(!$id) header("Location: /");
+        
+        //retrieve an instance of that agent by id
+        $agent = Agent::findById($id);
+
+        //then delete that agent in DB
+        $agent->delete();
+    }
+  }
 }
