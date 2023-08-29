@@ -72,6 +72,22 @@ class Agent extends ActiveRecord
       echo "NOT UPDATED IN DB";
     }
   }
+  public function delete()
+  {
+
+    $query = "DELETE FROM " . self::$table . " WHERE id=$this->id;";
+    
+    $result = self::$db->query($query);
+
+    if ($result) {
+      $code = CODE_DELETED_SUCCESS;
+      $direction = ROUTE_ADMIN . "?code_message=" . $code;
+      header("Location: " . $direction);
+    } else {
+      echo "NOT DELETED IN DB";
+    }
+
+  }
 
   public function getAttributes()
   {
@@ -131,8 +147,8 @@ class Agent extends ActiveRecord
       //this is the file position
       $pathFile = PATH_IMAGES . $this->image_agent;
 
-       //check it exists and delete
-       file_exists($pathFile) &&  unlink($pathFile);
+      //check it exists and delete
+      file_exists($pathFile) &&  unlink($pathFile);
     }
 
     //set the image property
