@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Intervention\Image\ImageManagerStatic as Image;
-
+use Model\Agent;
 use MVC\Router;
 use Model\Property;
 
@@ -14,9 +14,11 @@ class PropertyController
   {
 
     $properties = Property::getAll();
+    $agents = Agent::getAll();
 
     $router->render(ROUTE_ADMIN, [
-      "properties" => $properties
+      "properties" => $properties,
+      "agents" => $agents
     ]);
   }
 
@@ -84,20 +86,28 @@ class PropertyController
 
       $args = $_POST["property"];
 
-      // this method takes the data inputs and update the property object
-      // if a property has changed it will be updated in the object self
+      // this method takes the data inputs and update the property object, if a property has changed it will be updated in the object self
       $property->sincronize($args);
 
       $errors = $property->validate();
-
-      if($_FILES["property"]["tmp_name"]["image"]){
-        // user wants to insert new image and delete the older one
-
-        
-      }
-
-
+      
       if (empty($errors)) {
+        
+        if($_FILES["property"]["tmp_name"]["image"]){
+          // user wants to insert new image and delete the older one
+          
+          //give a new name to that image
+          $newNameImage = md5(uniqid(rand(), true)) . ".jpeg";
+          
+          //make and save the image in images folder
+          $image = Image::make($_FILES["property"]["tmp_name"]["image"]);
+          $image->save(PATH_IMAGES . $newNameImage);
+
+          //set the name of the image in the object $property to send the new name image to DB
+          $property->setImage($newNameImage);
+          //actualmente termina con d4410 7.28
+
+        }
 
         $property->update();
       }
