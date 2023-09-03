@@ -20,7 +20,8 @@ class Router
   }
 
   public function checkRoutes()
-  {
+  { 
+    $protectedRoutes = [ ROUTE_ADMIN, ROUTE_CREATE, ROUTE_UPDATE, ROUTE_DELETE, ROUTE_LOGOUT, "/agents/create","/agents/update", "/agents/delete", ROUTE_LOGOUT ];
 
     $currentUrl = $_SERVER[PATH_INFO] ?? ROUTE_HOME;
     $method = $_SERVER[REQUEST_METHOD];
@@ -34,6 +35,19 @@ class Router
     if($method === POST){
       $fn = $this->routesPOST[$currentUrl] ?? null;
     }
+
+    //check if the currentUrl is a protected one
+    if(in_array($currentUrl, $protectedRoutes)){
+
+      session_start();
+      $auth = $_SESSION["login"] ?? false;
+
+      if (!$auth){
+        header("Location: /");
+      }
+    }
+
+
     if ($fn) {
       call_user_func($fn, $this);
     } else {
