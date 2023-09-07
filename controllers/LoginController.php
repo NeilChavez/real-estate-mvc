@@ -31,25 +31,26 @@ class LoginController
           $singleResult = array_shift($result);
           $passInDB = $singleResult->password;
 
-         $auth =  $admin->checkPassword($passInDB);
+          $auth =  $admin->checkPassword($passInDB);
 
-         if($auth){
+          if ($auth) {
 
-          //give the authorization to start the session to the user
-          $admin->authUser();
-         }
+            //give the authorization to start the session to the user
+            $admin->authUser();
+          }
         }
         $errors = Admin::$errors;
       }
     }
 
-    $router->render("login/form", [
+    $router->render(ROUTE_LOGIN, [
       "errors" => $errors,
       "user" => $admin
     ]);
   }
 
-  public static function logout(){
+  public static function logout()
+  {
     session_start();
     $_SESSION = [];
     header("Location: /");

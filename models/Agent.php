@@ -7,7 +7,7 @@ use Model\ActiveRecord;
 class Agent extends ActiveRecord
 {
 
-  protected static $columnsDB = ["id", "name_agent", "surname_agent", "phone_number", "imagen_agent"];
+  protected static $columnsDB = ["id", "name_agent", "surname_agent", "phone_number", "imagen"];
   protected static $table = "agents";
 
   protected static $errors = [];
@@ -24,7 +24,7 @@ class Agent extends ActiveRecord
     $this->name_agent =  $args["name_agent"] ?? "";
     $this->surname_agent = $args["surname_agent"] ?? "";
     $this->phone_number = $args["phone_number"] ?? "";
-    $this->image = $args["image_agent"] ?? "";
+    $this->image = $args["image"] ?? "";
   }
 
   public function validate()

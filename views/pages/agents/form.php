@@ -21,9 +21,9 @@
       <input type="file" name="agent[image]" accept="image/jpeg">
     </label>
     <?php 
-      if($agent->image_agent){
+      if($agent->image){
         ?>
-        <img src="/images/<?php echo $agent->image_agent ?>" alt="<?php echo $agent->name_agent ?> ">
+        <img src="/images/<?php echo $agent->image ?>" alt="<?php echo $agent->name_agent ?> ">
         <?php
       }
     ?>

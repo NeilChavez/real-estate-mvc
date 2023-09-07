@@ -13,6 +13,12 @@ define("ROUTE_ADMIN",  "/properties/admin");
 define("ROUTE_CREATE", "/properties/create");
 define("ROUTE_UPDATE", "/properties/update");
 define("ROUTE_DELETE", "/properties/delete");
+define("ROUTE_LOGOUT", "/logout");
+define("ROUTE_LOGIN", "/login/form");
+define("AGENT_CREATE", "/agents/create");
+define("AGENT_UPDATE", "/agents/update");
+define("AGENT_DELETE", "/agents/delete");
+
 
 //CODE MESSAGES 
 define("CODE_CREATED_SUCCESS", "1");

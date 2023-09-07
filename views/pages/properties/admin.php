@@ -60,7 +60,7 @@ if ($codeMessage) {
 <br>
 <h2>Properties</h2>
 <br>
-<a href="/agents/create">Create Agent</a>
+<a href="<?php echo AGENT_CREATE ?>">Create Agent</a>
 <br>
 <br>
 <table>
@@ -78,17 +78,17 @@ if ($codeMessage) {
     ?>
       <tr>
         <td><?php echo $agent->id ?></td>
-        <td><img src="/images/<?php echo $agent->image_agent ?>" alt="<?php echo $agent->name_agent ?>"></td>
+        <td><img src="/images/<?php echo $agent->image ?>" alt="<?php echo $agent->name_agent ?>"></td>
         <td><?php echo $agent->name_agent ?></td>
         <td><?php echo $agent->surname_agent ?></td>
         <td><?php echo $agent->phone_number ?></td>
 
         <td>
-          <form method="POST" action="/agents/delete">
+          <form method="POST" action=<?php echo AGENT_DELETE ?>>
             <input type="hidden" value="<?php echo $agent->id ?>" name="id">
             <button>Delete</button>
           </form>
-          <a href="/agents/update?id=<?php echo $agent->id; ?>">
+          <a href="<?php echo AGENT_UPDATE ?>?id=<?php echo $agent->id; ?>">
             Edit
           </a>
         </td>

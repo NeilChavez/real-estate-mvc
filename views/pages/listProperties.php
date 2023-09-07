@@ -5,7 +5,7 @@
       <div>
         <h3><?php echo $property->title ?></h3>
         <figure>
-          <img src=<?php echo $property->image ?> alt="<?php echo $property->title ?>">
+          <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->title ?>">
           <figcaption>
       </div>
       <ul>

@@ -21,7 +21,7 @@ class Router
 
   public function checkRoutes()
   { 
-    $protectedRoutes = [ ROUTE_ADMIN, ROUTE_CREATE, ROUTE_UPDATE, ROUTE_DELETE, ROUTE_LOGOUT, "/agents/create","/agents/update", "/agents/delete", ROUTE_LOGOUT ];
+    $protectedRoutes = [ ROUTE_ADMIN, ROUTE_CREATE, ROUTE_UPDATE, ROUTE_DELETE, ROUTE_LOGOUT, AGENT_CREATE, AGENT_UPDATE, AGENT_DELETE, ROUTE_LOGOUT ];
 
     $currentUrl = $_SERVER[PATH_INFO] ?? ROUTE_HOME;
     $method = $_SERVER[REQUEST_METHOD];
