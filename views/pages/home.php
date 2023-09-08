@@ -1,21 +1,34 @@
 <section class="hero home relative">
-  <div class="residential-solutions wrapper container flex flex-column">
-    <div class="text flex justify-center items-center">
-      Find the perfect place to
-      Live with your family
+  <div class="residential-solutions wrapper container flex items-center">
+    <div class="flex items-center column align-items-start gap-2">
+      <span class="text chip">Real Estate Agency</span>
+      <P class="text">
+        Find the perfect place to
+        Live with your family
+      </P>
+
+      <span class="chip">Distinctively re-engineer revolutionary meta-services and premium architectures. Intrinsically incubate.</span>
+      <a href="#section-properties" class="btn-m btn-white bold">
+        Explore Properties
+        <img src="/images/icons/arrow-down.svg" alt="arrow-icon" class="icon">
+      </a>
     </div>
     <div class="home-image">
       <div class="absolute image-hero-wrapper">
-        <img src="/images/hero-house.webp" alt="hero" class="">
+        <img src="/images/hero-house.webp" alt="hero">
       </div>
     </div>
   </div>
 </section>
 
-<section class="fluid-grid">
 
-  <?php
-  include "listProperties.php";
-  ?>
-
-</section>
+  <section class="properties-section" id="section-properties">
+    <div class=" fluid-grid  container">
+      <?php
+      include "listProperties.php";
+      ?>
+    </div>
+    <div class="flex justify-center mt-2">
+      <a href="#" class="btn-lg btn-blue">View More</a>
+    </div>
+  </section>

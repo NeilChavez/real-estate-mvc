@@ -1,32 +1,49 @@
-  <?php
-  foreach ($properties as $property) { ?>
-    <div>
 
-      <div>
-        <h3><?php echo $property->title ?></h3>
-        <figure>
-          <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->title ?>">
-          <figcaption>
+    <?php
+    foreach ($properties as $property) { ?>
+
+      <div class="card">
+        <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->title ?>" class="image">
+        <div class="details flex column gap-sm">
+          <div class="flex align-items-center justify-content-between">
+            <span class="price">10000 €</span>
+            <a href="#" class="btn-sm btn-yellow">For Sale</a>
+          </div>
+          <h4><?php echo $property->title ?></h4>
+          <p><?php
+              echo $property->address_name . " " . $property->address_number
+              ?></p>
+
+
+          <p><?php echo $property->description ?></p>
+
+          <div>
+            <ul class="flex gap-sm">
+              <li class="flex items-center gap-sm border-gray-thick">
+                <img src="/images/icons/icon-bed.svg" class="icon" alt="icon bed">
+                <span>
+                  <?php echo $property->rooms ?> rooms
+                </span>
+              </li>
+              <li class="flex items-center gap-sm border-gray-thick">
+                <img src="/images/icons/icon-bathroom.svg" class="icon" alt="icon bathroom">
+                <span>
+                  3 Baths
+                </span>
+              </li>
+              <li class="flex items-center gap-sm border-gray-thick">
+                <img src="/images/icons/icon-sqft.svg" class="icon" alt="icon sqft">
+                <span>
+                  <?php echo $property->area ?> sqft
+                </span>
+              </li>
+              <li>
+                Agent: <?php echo $property->agents_id ?>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <ul>
-        <li>Address: <?php
-                      echo $property->address_name . " " . $property->address_number
-                      ?>
-        </li>
-        <li>
-          Area: <?php echo $property->area ?>
-        </li>
-        <li>
-          Rooms: <?php echo $property->rooms ?>
-        </li>
-        <li>
-          Agent: <?php echo $property->agents_id ?>
-        </li>
-      </ul>
-      </figcaption>
-      </figure>
-      <p><?php echo $property->description ?></p>
-    </div>
-  <?php
-  }
-  ?>
+    <?php
+    }
+    ?>
