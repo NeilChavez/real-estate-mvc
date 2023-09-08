@@ -9,13 +9,18 @@ const $ = (selector) => {
 }
 
 
-const menuToggleIcon = $('.menu-toggle'),
-  headerElement = $('.header')
-
-menuToggleIcon.addEventListener('click', () => {
-  headerElement.classList.toggle('open')
-})
+const toogleMenu = () => { 
+  const $header = $('.header');
+  $header.classList.toggle('active');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   //call here the functions
+  d.addEventListener("click", (e) => { 
+    
+    if (e.target.matches('#hamburger-1') || e.target.matches('#hamburger-1 *' )) {
+       toogleMenu();
+    }
+    
+  })
 })
