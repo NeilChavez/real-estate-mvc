@@ -22,13 +22,14 @@
 </section>
 
 
-  <section class="properties-section" id="section-properties">
-    <div class=" fluid-grid  container">
-      <?php
-      include "listProperties.php";
-      ?>
-    </div>
-    <div class="flex justify-center mt-2">
-      <a href="#" class="btn-lg btn-blue">View More</a>
-    </div>
-  </section>
+<section class="properties-section" id="section-properties">
+  <h1 class="title-section">Properties for sale in your favorite area</h1>
+  <div class=" fluid-grid  container">
+    <?php
+    include "listProperties.php";
+    ?>
+  </div>
+  <div class="flex justify-center mt-2">
+    <a href="#" class="btn-lg btn-blue">View More</a>
+  </div>
+</section>

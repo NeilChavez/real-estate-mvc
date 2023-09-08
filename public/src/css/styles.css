@@ -161,7 +161,7 @@ li {
   align-items: start;
 }
 
-.mt-2{
+.mt-2 {
   margin-top: 2rem;
 }
 .gap-sm {
@@ -184,7 +184,7 @@ li {
   border: 1px solid var(--content-color);
 }
 
-.margin-center{
+.margin-center {
   margin: 0 auto;
 }
 
@@ -208,12 +208,18 @@ li {
 .paragraph {
   max-width: 1920px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 4rem;
 }
 
 .list-type {
   max-width: 1920px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 4rem;
 }
 
@@ -227,15 +233,23 @@ li {
 }
 
 .blockquote {
+  display: flex;
   width: 1400px;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 4rem;
 }
 
 .blockquote div.wrapper {
+  display: flex;
   margin: 0 auto;
+  align-items: center;
 }
 
 .blockquote div.quote {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 0.7rem;
 }
 
@@ -306,7 +320,7 @@ li {
 }
 .menu {
   position: absolute;
-  top: var(--height-nav);
+  top: 4.7rem;
   right: 0;
   width: 100%;
   background-color: var(--secondary-background-color);
@@ -375,9 +389,9 @@ li {
 
 /* todo */
 .image-hero-wrapper {
+  right: 0;
   bottom: 0;
-  width: 50%;
-  /* border: thick solid yellowgreen */
+  width: 75%;
 }
 
 .text {
@@ -401,7 +415,14 @@ li {
 /* Properties section */
 
 .properties-section {
+  padding: 6rem;
   background-color: var(--quaternary-color);
+}
+.title-section {
+  padding-bottom: 3rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Card Property */
@@ -480,6 +501,9 @@ li {
   }
   .residential-solutions {
     flex-direction: row;
+  }
+  .image-hero-wrapper {
+    width: 50%;
   }
 }
 
