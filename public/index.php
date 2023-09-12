@@ -5,6 +5,7 @@ use Controllers\AgentController;
 use Controllers\LoginController;
 use Controllers\PagesController;
 use Controllers\PropertyController;
+use Model\Property;
 
 include_once __DIR__ . "/../includes/app.php";
 
@@ -17,6 +18,7 @@ $router->post(ROUTE_CREATE, [PropertyController::class, "create"]);
 $router->get(ROUTE_UPDATE, [PropertyController::class, "update"]);
 $router->post(ROUTE_UPDATE, [PropertyController::class, "update"]);
 $router->post(ROUTE_DELETE, [PropertyController::class, "delete"]);
+$router->get(ROUTE_PROPERTIES, [PropertyController::class, "read"]);
 
 //agents
 $router->get(AGENT_CREATE, [AgentController::class, "create"]);

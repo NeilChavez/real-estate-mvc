@@ -22,6 +22,13 @@ class PropertyController
     ]);
   }
 
+  public static function read(Router $router)
+  { 
+     $properties = Property::getAll();
+     $router->render(ROUTE_PROPERTIES, [
+       "properties" => $properties
+     ]);
+  }
   public static function create(Router $router)
   {
 
@@ -90,15 +97,15 @@ class PropertyController
       $property->sincronize($args);
 
       $errors = $property->validate();
-      
+
       if (empty($errors)) {
-        
-        if($_FILES["property"]["tmp_name"]["image"]){
+
+        if ($_FILES["property"]["tmp_name"]["image"]) {
           // user wants to insert new image and delete the older one
-          
+
           //give a new name to that image
           $newNameImage = md5(uniqid(rand(), true)) . ".jpeg";
-          
+
           //make and save the image in images folder
           $image = Image::make($_FILES["property"]["tmp_name"]["image"]);
           $image->save(PATH_IMAGES . $newNameImage);
@@ -119,7 +126,8 @@ class PropertyController
     ]);
   }
 
-  public static function delete(){
+  public static function delete()
+  {
     $id = filter_var($_POST["id"], FILTER_VALIDATE_INT);
     if (!$id) {
       header("Location: /admin");
