@@ -23,13 +23,67 @@
 
 
 <section class="properties-section" id="section-properties">
-  <h1 class="title-section">Properties for sale in your favorite area</h1>
-  <div class=" fluid-grid  container">
+  <h2 class="title-section">Properties for sale in your favorite area</h2>
+  <div class="fluid-grid container">
     <?php
-    include "listProperties.php";
+    include "list-properties.php";
     ?>
   </div>
   <div class="flex justify-center mt-2">
-    <a href="#" class="btn-lg btn-blue">View More</a>
+    <a href="<?php echo ROUTE_PROPERTIES?>" class="btn-lg btn-blue">View More</a>
+  </div>
+</section>
+
+<section>
+  <h2 class="title-section">Why Choose Our Properties Of Real Estate Industries</h2>
+  <div class="grid grid-container container">
+    <div class="card first-box column">
+      <div class="image-wrapper">
+        <img src="/images/icons/piggy-bank.svg" alt="piggy icon">
+      </div>
+      <div class="flex column gap">
+        <h5 class="text-center">Budget Friendly</h5>
+        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+      </div>
+    </div>
+
+    <div class="card second-box flex-row align-items-center">
+      <div class="image-wrapper flex">
+        <img src="/images/icons/church.svg" alt="church icon">
+      </div>
+      <div class="flex column gap">
+        <h5 class="text-center">Property Insurance</h5>
+        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis Distinctively re-engineer revolutionary meta-services and premium.<span>
+      </div>
+    </div>
+
+    <div class="card third-box column">
+      <div class="image-wrapper">
+        <img src="/images/icons/billets.svg" alt="billets icon">
+      </div>
+      <div class="flex column gap">
+        <h5 class="text-center">Trusted By Thousands</h5>
+        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+      </div>
+    </div>
+
+    <div class="card fourth-box column">
+      <div class="image-wrapper">
+        <img src="/images/icons/map.svg" alt="map icon">
+      </div>
+      <div class="flex column gap">
+        <h5 class="text-center">Prime Location</h5>
+        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+      </div>
+    </div>
+    <div class="card fifth-box column">
+      <div class="image-wrapper">
+        <img src="/images/icons/hands.svg" alt="church icon">
+      </div>
+      <div class="flex column gap">
+        <h5 class="text-center">Lowest Commission</h5>
+        <span class="text-md">Lorem ipsum dolor, sit amet adipisicing elit. Fuga dolor veniam velit, qui non nulla dolorem deleniti quod quo voluptates quam esse rerum quaerat ea, repudiandae exercitationem nostrum totam alias!</span>
+      </div>
+    </div>
   </div>
 </section>
