@@ -2,7 +2,7 @@
     <?php
     foreach ($properties as $property) { ?>
 
-      <div class="card">
+      <div class="card column">
         <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->title ?>" class="image">
         <div class="details flex column gap-sm">
           <div class="flex align-items-center justify-content-between">
