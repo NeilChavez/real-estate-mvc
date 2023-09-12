@@ -9,6 +9,7 @@ define("PATH_IMAGES", $_SERVER[DOCUMENT_ROOT] . "/images/");
 
 //ROUTES CONSTS
 define("ROUTE_HOME", "/");
+define("ROUTE_PROPERTIES", "/properties/all-properties");
 define("ROUTE_ADMIN",  "/properties/admin");
 define("ROUTE_CREATE", "/properties/create");
 define("ROUTE_UPDATE", "/properties/update");
