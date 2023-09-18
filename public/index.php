@@ -25,10 +25,11 @@ $router->get(AGENT_CREATE, [AgentController::class, "create"]);
 $router->post(AGENT_CREATE, [AgentController::class, "create"]);
 $router->get(AGENT_UPDATE, [AgentController::class, "update"]);
 $router->post(AGENT_UPDATE, [AgentController::class, "update"]);
-$router->post(AGENT_UPDATE, [AgentController::class, "delete"]);
+$router->post(AGENT_DELETE, [AgentController::class, "delete"]);
 
 //pages
 $router->get(ROUTE_HOME, [PagesController::class, "home"]);
+$router->get(ROUTE_PROPERTY, [PagesController::class, "property"]);
 
 //login
 $router->get("/login", [LoginController::class, "login"]);
