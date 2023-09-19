@@ -1,17 +1,23 @@
-<?php if (!empty($errors)) {
-  foreach ($errors as $error) :
-?>
-    <p class="error"><?php echo $error ?></p>
-<?php
-  endforeach;
-} ?>
+<section class="section login ">
 
-<form method="POST">
-    <br>
-    <br>
-    <input type="text" name="username" placeholder="username">
-    <br>
-    <input type="password" name="password" placeholder="password">
-    <br>
-    <button >login</button>
-  </form>
+  <h2>Login as Admin</h2>
+  <?php if (!empty($errors)) {
+    foreach ($errors as $error) :
+  ?>
+      <p class="text-error text-center"><?php echo $error ?></p>
+  <?php
+    endforeach;
+  } ?>
+
+  <div class="flex justify-center align-items-center container-xs">
+
+
+    <form method="POST" class="form login">
+      <div class="inputs-wrapper flex column gap-2">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <button class="btn-m btn-blue">login</button>
+      </div>
+    </form>
+  </div>
+</section>
