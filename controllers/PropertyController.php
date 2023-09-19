@@ -34,6 +34,8 @@ class PropertyController
 
     $errors = [];
     $property = new Property();
+    $agents = Agent::getAll();
+
     if ($_SERVER[REQUEST_METHOD] === POST) {
 
       $args = $_POST["property"];
@@ -75,6 +77,7 @@ class PropertyController
 
     $router->render(ROUTE_CREATE, [
       "errors" => $errors,
+      "agents" => $agents,
       "property" => $property
     ]);
   }
@@ -87,6 +90,7 @@ class PropertyController
       header("Location: /admin");
     }
     $property = Property::findById($id);
+    $agents = Agent::getAll();
 
     $errors = [];
     if ($_SERVER[REQUEST_METHOD] === POST) {
@@ -121,6 +125,7 @@ class PropertyController
     }
 
     $router->render(ROUTE_UPDATE, [
+      "agents" => $agents,
       "property" => $property,
       "errors" => $errors
     ]);

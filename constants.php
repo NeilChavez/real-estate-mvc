@@ -9,6 +9,7 @@ define("PATH_IMAGES", $_SERVER[DOCUMENT_ROOT] . "/images/");
 
 //ROUTES CONSTS
 define("ROUTE_HOME", "/");
+define("ROUTE_PROPERTY", "/property");
 define("ROUTE_PROPERTIES", "/properties/all-properties");
 define("ROUTE_ADMIN",  "/properties/admin");
 define("ROUTE_CREATE", "/properties/create");
@@ -33,9 +34,9 @@ define("PASSWORD", "");
 define("DB_NAME", "real_state");
 
 //MESSAGES OPERATIONS 
-define("CREATE_SUCCESS", "Data create with success");
-define("UPDATED_SUCCESS", "Data updated with success");
-define("DELETED_SUCCESS", "Data deleted with success");
+define("CREATE_SUCCESS", "Data created with success!");
+define("UPDATED_SUCCESS", "Data updated with success!");
+define("DELETED_SUCCESS", "Data deleted with success!");
 
 //CONTENT TEXT
 define("PAGE_TITLE", "Real State");
