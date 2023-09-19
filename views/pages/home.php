@@ -22,7 +22,7 @@
 </section>
 
 
-<section class="properties-section" id="section-properties">
+<section class="properties-section section" id="section-properties">
   <h2 class="title-section">Properties for sale in your favorite area</h2>
   <div class="fluid-grid container">
     <?php
@@ -34,7 +34,7 @@
   </div>
 </section>
 
-<section>
+<section class="section">
   <h2 class="title-section">Why Choose Our Properties Of Real Estate Industries</h2>
   <div class="grid grid-container container">
     <div class="card first-box column">
