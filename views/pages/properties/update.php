@@ -10,5 +10,5 @@ if (!empty($errors)) {
 }
 ?>
 <?php
-include "form_update.php";
+include "form-property.php";
 ?>
