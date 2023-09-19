@@ -8,5 +8,5 @@ if (!empty($errors)) {
 }
 ?>
 <?php
-include "form_create.php";
+include "form-property.php"
 ?>
