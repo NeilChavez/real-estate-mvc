@@ -102,6 +102,16 @@ class ActiveRecord
     return $results;
   }
 
+  public static function get(int $limit)
+  {
+
+    $query = "SELECT * FROM " . static::$table." LIMIT " . $limit;
+
+    $results = self::consultSQL($query);
+
+    return $results;
+  }
+
   public static function findById($id)
   {
     $query = "SELECT * FROM " . static::$table . " WHERE id=$id";
