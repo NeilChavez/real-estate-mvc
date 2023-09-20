@@ -330,6 +330,17 @@ textarea {
   gap: 4rem;
 }
 
+
+.about-us article {
+padding: 4rem 0;
+display: flex;
+flex-direction: column;
+gap: var(--gap-1)
+}
+.about-us p {
+  padding: 0rem 3rem;
+}
+
 .list-type {
   max-width: 1920px;
   width: 100%;
@@ -351,7 +362,6 @@ textarea {
 
 .blockquote {
   display: flex;
-  width: 1400px;
   flex-direction: column;
   align-items: flex-start;
   gap: 4rem;
@@ -886,7 +896,7 @@ thead td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 200px; 
+  max-width: 200px;
   font-size: 2rem;
 }
 
@@ -896,7 +906,8 @@ thead td {
   gap: var(--gap-1);
   width: 100%
 }
-.agent-details h5{
+
+.agent-details h5 {
   padding-bottom: 1rem;
 }
 
@@ -907,12 +918,12 @@ thead td {
 }
 
 aside figcaption {
-  padding: 1rem 0; 
+  padding: 1rem 0;
   margin: 0 auto;
   gap: 0.5rem
 }
 
-.property-details article{
+.property-details article {
   padding-top: 1rem;
 }
 
