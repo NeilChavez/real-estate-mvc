@@ -30,6 +30,7 @@ $router->post(AGENT_DELETE, [AgentController::class, "delete"]);
 //pages
 $router->get(ROUTE_HOME, [PagesController::class, "home"]);
 $router->get(ROUTE_PROPERTY, [PagesController::class, "property"]);
+$router->get(ROUTE_ABOUT_US, [PagesController::class, "aboutUs"]);
 
 //login
 $router->get("/login", [LoginController::class, "login"]);

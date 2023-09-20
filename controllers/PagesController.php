@@ -32,6 +32,11 @@ class PagesController{
       "agent" => $agent
     ]);
   }
+  public static function aboutUs(Router $router)
+  {
+    echo "about us";
+    $router->render("about-us", []);
+  }
 
 }
 ?>

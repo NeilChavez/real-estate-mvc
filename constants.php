@@ -20,6 +20,7 @@ define("ROUTE_LOGIN", "/login/form");
 define("AGENT_CREATE", "/agents/create");
 define("AGENT_UPDATE", "/agents/update");
 define("AGENT_DELETE", "/agents/delete");
+define("ROUTE_ABOUT_US", "/about-us");
 
 
 //CODE MESSAGES 
