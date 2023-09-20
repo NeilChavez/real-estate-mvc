@@ -14,8 +14,6 @@ $auth = $_SESSION["login"] ?? null;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="/build/css/app.css"> -->
-  <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
   <link rel="stylesheet" href="/src/css/styles.css">
   <title>Document</title>
 </head>
@@ -39,7 +37,7 @@ $auth = $_SESSION["login"] ?? null;
               <a href="<?php echo ROUTE_PROPERTIES ?>" class="list-link current">Properties</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">About Us</a>
+              <a href="<?php echo ROUTE_ABOUT_US ?>" class="list-link">About Us</a>
             </li>
             <li class="list-item">
               <a href="#" class="list-link">Contact Us</a>
