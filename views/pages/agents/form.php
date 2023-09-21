@@ -1,18 +1,13 @@
 <section class="container">
-
-
+  
   <form method="POST" enctype="multipart/form-data" class="form flex column gap-2">
-
     <fieldset class="flex column">
-
-
       <label for="agent[name_agent]">Name
       </label>
       <input type="text" name="agent[name_agent]" id="agent[name_agent]" value="<?php
       echo $agent->name_agent
         ?>">
     </fieldset>
-
 
     <fieldset class="flex column">
       <label for="agent[surname_agent]">Surname
@@ -22,7 +17,6 @@
     </fieldset>
 
     <fieldset class="flex column">
-
       <label for="agent[phone_number]">N. Telephon
       </label>
       <input type="text" min="0" name="agent[phone_number]" id="agent[phone_number]"
@@ -30,7 +24,6 @@
     </fieldset>
 
     <fieldset class="flex column">
-
       <label for="agent[image]">Image
       </label>
       <input type="file" name="agent[image]" id="agent[image]" accept="image/jpeg">
