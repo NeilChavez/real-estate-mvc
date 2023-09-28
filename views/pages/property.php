@@ -5,7 +5,7 @@
   </h1>
 
   <picture>
-    <img src="images/<?php echo $property->image ?>" alt="<?php echo $property->name ?>">
+    <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->name ?>">
   </picture>
   <div class="details-wrapper">
     <ul class="flex gap-sm">
