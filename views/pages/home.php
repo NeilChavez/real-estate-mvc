@@ -26,7 +26,7 @@
   <h2 class="title-section">Properties for sale in your favorite area</h2>
   <div class="fluid-grid container">
     <?php
-    include __DIR__ . "../../includes/templates/list-properties.php"
+    include __DIR__ . "/../../includes/templates/list-properties.php"
     ?>
   </div>
   <div class="flex justify-center mt-2">
@@ -53,7 +53,8 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Property Insurance</h5>
-        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis Distinctively re-engineer revolutionary meta-services and premium.<span>
+        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis Distinctively re-engineer revolutionary meta-services and premium. 
+        </span>
       </div>
     </div>
 

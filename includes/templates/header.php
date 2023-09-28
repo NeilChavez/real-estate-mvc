@@ -14,9 +14,6 @@
           <li class="list-item">
             <a href="<?php echo ROUTE_ABOUT_US ?>" class="list-link">About Us</a>
           </li>
-          <li class="list-item">
-            <a href="#" class="list-link">Contact Us</a>
-          </li>
           <?php
           if ($auth) {
             ?>
