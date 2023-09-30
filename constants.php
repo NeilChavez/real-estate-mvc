@@ -40,4 +40,4 @@ define("UPDATED_SUCCESS", "Data updated with success!");
 define("DELETED_SUCCESS", "Data deleted with success!");
 
 //CONTENT TEXT
-define("PAGE_TITLE", "Real State");
+define("PAGE_TITLE", "Real Estate");
