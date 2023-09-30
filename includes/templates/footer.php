@@ -2,12 +2,10 @@
   <div class="footer-container container d-grid">
     <div class="company-data flex">
       <a href="/">
-        <h2 class="logo">Real State</h2>
+        <h2 class="logo"><?php echo PAGE_TITLE ?></h2>
       </a>
       <p class="company-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-        assumenda nulla sit amet consectetur adipisicing elit. Facere
-        assumenda nulla
+       Unlocking Dreams: Your Premier Real Estate Partner for Luxury Living, Investment, and Lifestyle Choices
       </p>
       <ul class="list social-media">
         <img src="/images/icons/twitch-icon.svg" alt="twitch icon" class="icon">
@@ -20,34 +18,34 @@
         <h6 class="title footer-title">Categories</h6>
         <ul class="list footer-list">
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Vacation Homes</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Apartments for Sale</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Vacation Homes</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Our Real Estate Agents</a>
           </li>
         </ul>
       </div>
 
       <div>
-        <h6 class="title footer-title">useful links</h6>
+        <h6 class="title footer-title">Useful links</h6>
         <ul class="list footer-list">
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Help Center</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Customer Reviews</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Home Buying Guide</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Real Estate Glossary</a>
           </li>
         </ul>
       </div>
@@ -56,16 +54,16 @@
         <h6 class="title footer-title">Company</h6>
         <ul class="list footer-list">
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Real Estate FAQs</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Current Listings</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Terms of Service</a>
           </li>
           <li class="list-item">
-            <a href="#" class="list-link">Simple Item</a>
+            <a href="#" class="list-link">Privacy Policy</a>
           </li>
         </ul>
       </div>

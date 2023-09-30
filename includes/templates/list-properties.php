@@ -5,10 +5,10 @@ foreach ($properties as $property) { ?>
     <img src="/images/<?php echo $property->image ?>" alt="<?php echo $property->title ?>" class="image">
     <div class="details flex column gap-sm">
       <div class="flex align-items-center justify-content-between">
-        <span class="price">10000 €</span>
-        <a href="<?php echo ROUTE_PROPERTY ?>?id=<?php echo $property->id ?>" class="btn-sm btn-yellow">For Sale</a>
+        <span class="price"> <?php echo $property->price ?>€</span>
+          <a href="<?php echo ROUTE_PROPERTY ?>?id=<?php echo $property->id ?>" class="btn-sm btn-yellow">For Sale</a>
       </div>
-      <h4>
+      <h4 class="max-1-lines">
         <?php echo $property->title ?>
       </h4>
       <p>
@@ -16,7 +16,7 @@ foreach ($properties as $property) { ?>
         echo $property->address_name . " " . $property->address_number
           ?>
       </p>
-      <p>
+      <p class="max-2-lines">
         <?php echo $property->description ?>
       </p>
 
