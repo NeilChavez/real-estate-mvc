@@ -50,19 +50,6 @@
       </picture>
     </aside>
     <p class="paragraph blockquote">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, quisquam. Minima quod debitis nostrum, fuga amet
-      dolores ex, quibusdam voluptate nam nobis sed itaque rerum eum deleniti quidem labore veniam?
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint doloremque animi incidunt non aliquam veritatis
-      magni
-      quam labore at. Tenetur voluptatum, harum officiis fuga officia in. Deleniti sunt ab quos?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam officia repellat quas dolore, quasi
-      veritatis deleniti architecto sapiente facere, dicta sunt distinctio. Praesentium voluptatem magnam, aliquid
-      consequatur reprehenderit harum?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusantium ea iste reiciendis, quod accusamus
-      eaque illo ratione quidem consequatur omnis temporibus deserunt nemo, doloribus eligendi veniam explicabo dolores
-      asperiores!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, corporis. Quidem mollitia
-      beatae dolor hic consequuntur exercitationem magnam? Laudantium deserunt numquam tempore, provident ab deleniti
-      sed eveniet esse? Ipsa, cumque.
       <?php echo $property->description ?>
     </p>
   </article>

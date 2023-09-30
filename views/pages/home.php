@@ -43,7 +43,7 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Budget Friendly</h5>
-        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+        <span class="text-md">Whether you're a first-time homebuyer or an investor seeking cost-effective opportunities, our listings provide value without compromising quality.</span>
       </div>
     </div>
 
@@ -53,7 +53,7 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Property Insurance</h5>
-        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis Distinctively re-engineer revolutionary meta-services and premium. 
+        <span class="text-md">Protect Your Investment with Comprehensive Property Insurance. Safeguard your home, business, or real estate investments with our reliable property insurance solutions.
         </span>
       </div>
     </div>
@@ -64,7 +64,7 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Trusted By Thousands</h5>
-        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+        <span class="text-md">Trusted by thousands, our reputation speaks for itself. We've built a solid track record of satisfied clients who have chosen us as their real estate partner. </span>
       </div>
     </div>
 
@@ -74,7 +74,7 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Prime Location</h5>
-        <span class="text-md">Distinctively re-engineer revolutionary meta-services and premium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</span>
+        <span class="text-md">Our portfolio showcases exclusive homes, apartments, and commercial spaces nestled in the heart of sought-after neighborhoods. </span>
       </div>
     </div>
     <div class="card fifth-box column">
@@ -83,7 +83,7 @@
       </div>
       <div class="flex column gap">
         <h5 class="text-center">Lowest Commission</h5>
-        <span class="text-md">Lorem ipsum dolor, sit amet adipisicing elit. Fuga dolor veniam velit, qui non nulla dolorem deleniti quod quo voluptates quam esse rerum quaerat ea, repudiandae exercitationem nostrum totam alias!</span>
+        <span class="text-md">Discover the savings and exceptional service that come with choosing us as your trusted real estate partner.</span>
       </div>
     </div>
   </div>
