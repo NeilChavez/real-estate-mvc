@@ -40,6 +40,12 @@
           <input type="number" placeholder="4" min="0" name="property[rooms]" id="property[rooms]"
             value="<?php echo $property->rooms ?>">
         </fieldset>
+           <fieldset class="flex column">
+          <label for="property[price]">Price
+          </label>
+          <input type="number" placeholder="120.000" min="0" name="property[price]" id="property[price]"
+            value="<?php echo $property->price ?>">
+          </fieldset>
 
         <fieldset class="flex column">
           <label for="property[agent]">Agent</label>

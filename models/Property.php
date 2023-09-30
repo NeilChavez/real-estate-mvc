@@ -6,7 +6,7 @@ class Property extends ActiveRecord
 
 {
   protected static $table = "properties";
-  protected static $columnsDB = ["id", "title", "address_name", "address_number", "description", "image", "area", "rooms", "date_creation", "agents_id"];
+  protected static $columnsDB = ["id", "title", "address_name", "address_number", "description", "image", "area", "rooms", "date_creation", "agents_id", "price"];
 
   protected static $errors = [];
 
@@ -20,6 +20,7 @@ class Property extends ActiveRecord
   public $rooms;
   public $date_creation;
   public $agents_id;
+  public $price;
 
   public function __construct($args = [])
   {
@@ -33,6 +34,7 @@ class Property extends ActiveRecord
     $this->rooms = $args["rooms"] ?? "";
     $this->date_creation = date('y/m/d') ?? "";
     $this->agents_id = $args["agents_id"] ?? 2;
+    $this->price = $args["price"] ?? "";
   }
   
 
@@ -58,6 +60,9 @@ class Property extends ActiveRecord
     }
     if ($this->image === null) {
       self::$errors[] = "You need to insert an image";
+    }
+    if ($this->price === "") {
+      self::$errors[] = "You need to insert a valid price";
     }
 
     //validate if there an image
