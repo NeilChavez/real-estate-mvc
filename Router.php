@@ -23,7 +23,8 @@ class Router
   { 
     $protectedRoutes = [ ROUTE_ADMIN, ROUTE_CREATE, ROUTE_UPDATE, ROUTE_DELETE, ROUTE_LOGOUT, AGENT_CREATE, AGENT_UPDATE, AGENT_DELETE, ROUTE_LOGOUT ];
 
-    $currentUrl = $_SERVER[PATH_INFO] ?? ROUTE_HOME;
+    // $currentUrl = $_SERVER[PATH_INFO] ?? ROUTE_HOME
+    $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
     $method = $_SERVER[REQUEST_METHOD];
 
     $fn = "";
