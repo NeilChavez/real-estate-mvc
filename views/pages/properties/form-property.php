@@ -7,7 +7,7 @@
       <fieldset class="flex column">
         <label for="property[title]">Title
         </label>
-        <input type="text" placeholder="House in Paris" name="property[title]" id="property[title]" value="<?php
+        <input type="text" autocomplete="off" placeholder="House in Paris" name="property[title]" id="property[title]" value="<?php
         echo $property->title
           ?>">
       </fieldset>
@@ -17,7 +17,7 @@
 
         <label for="property[address_name]">Address
         </label>
-        <input type="text" placeholder="Av. des Champs-Élysées" name="property[address_name]"
+        <input type="text" autocomplete="off"  placeholder="Av. des Champs-Élysées" name="property[address_name]"
           id="property[address_name]" value="<?php echo $property->address_name ?>">
       </fieldset>
 
@@ -25,25 +25,25 @@
         <fieldset class="flex column">
           <label for="property[address_number]">Number Street
           </label>
-          <input type="text" placeholder="22" name="property[address_number]" id="property[address_number]"
+          <input type="text" autocomplete="off" placeholder="22" name="property[address_number]" id="property[address_number]"
             value="<?php echo $property->address_number ?>">
         </fieldset>
         <fieldset class="flex column">
           <label for="property[area]">Area
           </label>
-          <input type="number" placeholder="85" min="0" name="property[area]" id="property[area]"
+          <input type="number" autocomplete="off"  placeholder="85" min="0" name="property[area]" id="property[area]"
             value="<?php echo $property->area ?>">
         </fieldset>
         <fieldset class="flex column">
           <label for="property[rooms]">Rooms
           </label>
-          <input type="number" placeholder="4" min="0" name="property[rooms]" id="property[rooms]"
+          <input type="number" autocomplete="off" placeholder="4" min="0" name="property[rooms]" id="property[rooms]"
             value="<?php echo $property->rooms ?>">
         </fieldset>
            <fieldset class="flex column">
           <label for="property[price]">Price
           </label>
-          <input type="number" placeholder="120.000" min="0" name="property[price]" id="property[price]"
+          <input type="number" autocomplete="off" placeholder="120.000" min="0" name="property[price]" id="property[price]"
             value="<?php echo $property->price ?>">
           </fieldset>
 

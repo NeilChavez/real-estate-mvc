@@ -4,7 +4,7 @@
     <fieldset class="flex column">
       <label for="agent[name_agent]">Name
       </label>
-      <input type="text" name="agent[name_agent]" id="agent[name_agent]" value="<?php
+      <input type="text" autocomplete="off" name="agent[name_agent]" id="agent[name_agent]" value="<?php
       echo $agent->name_agent
         ?>">
     </fieldset>
@@ -12,21 +12,21 @@
     <fieldset class="flex column">
       <label for="agent[surname_agent]">Surname
       </label>
-      <input type="text" name="agent[surname_agent]" id="agent[surname_agent]"
+      <input type="text" autocomplete="off" name="agent[surname_agent]" id="agent[surname_agent]"
         value="<?php echo $agent->surname_agent ?>">
     </fieldset>
 
     <fieldset class="flex column">
       <label for="agent[phone_number]">N. Telephon
       </label>
-      <input type="text" min="0" name="agent[phone_number]" id="agent[phone_number]"
+      <input type="text" autocomplete="off" min="0" name="agent[phone_number]" id="agent[phone_number]"
         value="<?php echo $agent->phone_number ?>">
     </fieldset>
 
     <fieldset class="flex column">
       <label for="agent[image]">Image
       </label>
-      <input type="file" name="agent[image]" id="agent[image]" accept="image/jpeg">
+      <input type="file" autocomplete="off" name="agent[image]" id="agent[image]" accept="image/jpeg">
     </fieldset>
     <?php
     if ($agent->image) {
